@@ -6,24 +6,15 @@
     <title>
         @yield('title','Blog')
     </title>
-    <link rel="stylesheet" href={{asset('css/main.css')}}>
+    <link rel="stylesheet" href="{{asset('css/main.css')}}">
 </head>
 <body>
 
 <ul class="nav">
-    <!-- @if (request()->routeIs('home')) -->
-    <li><a class={{ request()->routeIs('home') ? 'active' : ''}} href={{route('home') }}>Home</a></li>
-    <li><a class={{ request()->routeIs('about') ? 'active' : ''}} href={{route('about') }}>About</a></li>
-    <!-- @else
-    <li><a href={{route('home') }}>Home</a></li>
-    @endif -->
-
-    <!-- @if (request()->routeIs('about'))
-    <li><a class="active" href={{route('about') }}>About</a></li> -->
-    <!-- @else -->
-    
-    <!-- @endif -->
-
+   
+    <li><a class="{{ request()->routeIs('home') ? 'active' : ''}}" href="{{route('home') }}">Home</a></li>
+    <li><a class="{{ request()->routeIs('about') ? 'active' : ''}}" href="{{route('about') }}">About</a></li>
+    <li><a class="{{ request()->routeIs('posts.create') ? 'active' : ''}}" href="{{route('posts.create') }}">Create Post</a></li>
 </ul>
 
 <div class="main">

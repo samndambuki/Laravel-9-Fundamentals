@@ -6,6 +6,7 @@
 <h1>Create a new blog post</h1>
 
 <form method="POST" action="{{route('posts.store')}}">
+    @csrf
 
     <label>Title</label>
     <input type="text" name="title">
